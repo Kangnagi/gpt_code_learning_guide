@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { ChevronDown, Code2, Layers, Zap, Brain } from "lucide-react";
+import { ChevronDown, Code2, Layers, Zap, Brain, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useLocation } from "wouter";
 
 interface ComponentInfo {
   name: string;
@@ -100,6 +101,7 @@ const components: ComponentInfo[] = [
 ];
 
 export default function Home() {
+  const [, setLocation] = useLocation();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   return (
@@ -397,6 +399,19 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Navigation to Full Code */}
+        <section className="mt-12">
+          <Button
+            size="lg"
+            onClick={() => setLocation("/full-code")}
+            className="w-full bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-semibold py-6 text-lg gap-2"
+          >
+            <Code2 className="w-5 h-5" />
+            전체 코드 분석 보기
+            <ArrowRight className="w-5 h-5" />
+          </Button>
         </section>
 
         {/* CTA */}
