@@ -9,6 +9,8 @@ import FullCode from "./pages/FullCode";
 import AttentionMechanism from "./pages/AttentionMechanism";
 import ActivationFunctions from "./pages/ActivationFunctions";
 import LayerNormDetails from "./pages/LayerNormDetails";
+import GPT2Config from "./pages/GPT2Config";
+import TextGeneration from "./pages/TextGeneration";
 
 
 function Router() {
@@ -19,6 +21,8 @@ function Router() {
       <Route path={"/attention-mechanism"} component={AttentionMechanism} />
       <Route path={"/activation-functions"} component={ActivationFunctions} />
       <Route path={"/layer-norm-details"} component={LayerNormDetails} />
+      <Route path={"/gpt2-config"} component={GPT2Config} />
+      <Route path={"/text-generation"} component={TextGeneration} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
