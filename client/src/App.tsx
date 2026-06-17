@@ -6,6 +6,9 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import FullCode from "./pages/FullCode";
+import AttentionMechanism from "./pages/AttentionMechanism";
+import ActivationFunctions from "./pages/ActivationFunctions";
+import LayerNormDetails from "./pages/LayerNormDetails";
 
 
 function Router() {
@@ -13,6 +16,9 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/full-code"} component={FullCode} />
+      <Route path={"/attention-mechanism"} component={AttentionMechanism} />
+      <Route path={"/activation-functions"} component={ActivationFunctions} />
+      <Route path={"/layer-norm-details"} component={LayerNormDetails} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
